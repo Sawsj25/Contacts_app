@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginHorizontal="5dp"
     android:layout_marginVertical="9dp"
     app:cardElevation="4dp">
 
-    <RelativeLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="10dp">
@@ -17,15 +18,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="نام"
-            android:textSize="25dp" />
+            //adada tooye dimen lotfan
+            android:textSize="25dp"
+            tools:ignore="MissingConstraints" />
 
         <TextView
             android:id="@+id/phoneTextview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="left"
             android:text="تلفن"
-            android:textSize="25dp" />
-    </RelativeLayout>
+            android:textSize="25dp"
+            tools:ignore="MissingConstraints" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.cardview.widget.CardView>

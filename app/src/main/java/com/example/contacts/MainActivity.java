@@ -13,17 +13,18 @@ import com.example.contacts.MyRecyclerViewAdapter;
 import com.example.contacts.R;
 
 import java.util.ArrayList;
-
+//import ezafi age hast pak she
 public class MainActivity extends AppCompatActivity {
-
+//public private rayat she
     MyRecyclerViewAdapter adapter;
-    Button mixButton;
+    Button importButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mixButton = findViewById(R.id.mixButton);
+        //inja chandta tabe besaz hamaro tooye onCreate nazar mese initView o initData o ina
+        importButton = findViewById(R.id.importButton);
         // data to populate the RecyclerView with
         ArrayList<String> contactNames = new ArrayList<>();
         contactNames.add("ali");
@@ -31,19 +32,30 @@ public class MainActivity extends AppCompatActivity {
         contactNames.add("hasan");
         contactNames.add("zahra");
         contactNames.add("saeid");
+        contactNames.add("ali");
+        contactNames.add("mohammad");
+        contactNames.add("hasan");
+        contactNames.add("zahra");
+        contactNames.add("saeid");
+        contactNames.add("ali");
+        contactNames.add("mohammad");
+        contactNames.add("hasan");
+        contactNames.add("zahra");
+        contactNames.add("saeid");
 
         // set up the RecyclerView
+        //recycler ro bala tarif kon va inja faghat finview kon
         RecyclerView recyclerView = findViewById(R.id.my_recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         adapter = new MyRecyclerViewAdapter(this, contactNames);
         recyclerView.setAdapter(adapter);
-
-        mixButton.setOnClickListener(this::startContactGetProcess);
+        //be in modele 2 ta do noghte zadan migan delegation. harja toonesti azin estefade kon
+        importButton.setOnClickListener(this::startContactGetProcess);
     }
 
     private void startContactGetProcess(View view) {
-
         //check permission
-        //get contacts
+        //if no permission request permission
+        //if has permission get contacts
     }
 }
