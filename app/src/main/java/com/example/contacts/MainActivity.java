@@ -16,8 +16,8 @@ import java.util.ArrayList;
 //import ezafi age hast pak she
 public class MainActivity extends AppCompatActivity {
 //public private rayat she
-    MyRecyclerViewAdapter adapter;
-    Button importButton;
+  private  MyRecyclerViewAdapter adapter;
+  private Button importButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,19 +32,19 @@ public class MainActivity extends AppCompatActivity {
         contactNames.add("hasan");
         contactNames.add("zahra");
         contactNames.add("saeid");
-        contactNames.add("ali");
-        contactNames.add("mohammad");
-        contactNames.add("hasan");
-        contactNames.add("zahra");
-        contactNames.add("saeid");
-        contactNames.add("ali");
-        contactNames.add("mohammad");
-        contactNames.add("hasan");
-        contactNames.add("zahra");
-        contactNames.add("saeid");
+        contactNames.add("yousef");
+        contactNames.add("mohammadamin");
+        contactNames.add("susan");
+        contactNames.add("fateme");
+        contactNames.add("sam");
+        contactNames.add("alireza");
+        contactNames.add("saba");
+        contactNames.add("majid");
+        contactNames.add("xaniar");
+        contactNames.add("nilofar");
 
         // set up the RecyclerView
-        //recycler ro bala tarif kon va inja faghat finview kon
+        //recycler ro bala tarif kon va inja faghat findview kon
         RecyclerView recyclerView = findViewById(R.id.my_recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         adapter = new MyRecyclerViewAdapter(this, contactNames);

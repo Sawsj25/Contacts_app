@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    // vase constraint range paszamine bezar hamishe chun bazi vaghta safhe zirisho mibini
     tools:context=".MainActivity">
-
-    //match parent ham ke mizari baz khoobe constraint ha ro rayat koni
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/my_recycler_view"
         android:layout_width="match_parent"
@@ -16,14 +14,16 @@
         android:scrollbars="vertical"
         tools:listitem="@layout/recyclerview_row"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
- //constrainta age momkene vase parent bashan na recycler
     <Button
         android:id="@+id/importButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
+        app:layout_constraintTop_toTopOf="@id/my_recycler_view"
+        app:layout_constraintLeft_toLeftOf="@id/my_recycler_view"
+        app:layout_constraintRight_toRightOf="@id/my_recycler_view"
+        app:layout_constraintBottom_toTopOf="@id/my_recycler_view"
         android:text="Import Contacts"
-        />
-
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

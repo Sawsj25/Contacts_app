@@ -18,8 +18,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="نام"
-            //adada tooye dimen lotfan
             android:textSize="25dp"
+            android:gravity="right"
             tools:ignore="MissingConstraints" />
 
         <TextView
@@ -28,6 +28,7 @@
             android:layout_height="wrap_content"
             android:text="تلفن"
             android:textSize="25dp"
+            android:gravity="left"
             tools:ignore="MissingConstraints" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
