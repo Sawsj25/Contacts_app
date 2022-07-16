@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 import java.util.Objects;
 
-public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAdapter.ViewHolder> {
+public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAdapter.ViewHolderShowItem> {
 
     private final List<String> mData; //
 
@@ -23,14 +23,14 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
 
     @NonNull
     @Override
-    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public ViewHolderShowItem onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recyclerview_row, parent, false);
-        return new ViewHolder(view);
+        return new ViewHolderShowItem(view);
 
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
+    public void onBindViewHolder(ViewHolderShowItem holder, int position) {
         //inja check vase position -1 bezar chun age ye moghe ba -1 ejra she, mData.get(-1) crash mikone
         String contact = mData.get(position);
         holder.nameTextView.setText(contact);
@@ -47,10 +47,10 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
     }
 
     //esme in class behtare viewholdere sade naabashe va ye esm bashe ke moshakhas kone karesh chie
-    public static class ViewHolder extends RecyclerView.ViewHolder {
+    public static class ViewHolderShowItem extends RecyclerView.ViewHolder {
         private final TextView nameTextView;
 
-        ViewHolder(View itemView) {
+        ViewHolderShowItem(View itemView) {
             super(itemView);
             nameTextView = itemView.findViewById(R.id.nameTextview);
         }
