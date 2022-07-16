@@ -3,19 +3,13 @@ package com.example.contacts;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.contacts.MyRecyclerViewAdapter;
-import com.example.contacts.R;
-
 import java.util.ArrayList;
-//import ezafi age hast pak she
-public class MainActivity extends AppCompatActivity {
-//public private rayat she
+
+  public class MainActivity extends AppCompatActivity {
   private  MyRecyclerViewAdapter adapter;
   private Button importButton;
 
