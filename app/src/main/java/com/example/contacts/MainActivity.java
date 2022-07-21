@@ -19,9 +19,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //inja chandta tabe besaz hamaro tooye onCreate nazar mese initView o initData o ina
         importButton = findViewById(R.id.importButton);
-        // data to populate the RecyclerView with
         ArrayList<String> contactNames = new ArrayList<>();
         contactNames.add("ali");
         contactNames.add("mohammad");
@@ -38,14 +36,15 @@ public class MainActivity extends AppCompatActivity {
         contactNames.add("majid");
         contactNames.add("xaniar");
         contactNames.add("nilofar");
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        adapter = new MyRecyclerViewAdapter(this, contactNames);
         recyclerView.setAdapter(adapter);
         //be in modele 2 ta do noghte zadan migan delegation. harja toonesti azin estefade kon
         importButton.setOnClickListener(this::startContactGetProcess);
     }
     public void findview (){
         recyclerView = findViewById(R.id.my_recycler_view);
+    }
+    public void initdata (){
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
 
     private void startContactGetProcess(View view) {
