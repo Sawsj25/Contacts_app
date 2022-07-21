@@ -1,6 +1,5 @@
 package com.example.contacts;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -31,25 +30,19 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
 
     @Override
     public void onBindViewHolder(ViewHolderShowItem holder, int position) {
-        //inja check vase position -1 bezar chun age ye moghe ba -1 ejra she, mData.get(-1) crash mikone
+        if(position == -1) return;
         String contact = mData.get(position);
         holder.nameTextView.setText(contact);
-        if(position<getItemCount()){
-            onBindViewHolder(holder, position);
-        }
     }
 
     @Override
     public int getItemCount() {
-        if (Objects.isNull(mData))
+        if (mData == null)
             return 0;
         return mData.size();
     }
-
-    //esme in class behtare viewholdere sade naabashe va ye esm bashe ke moshakhas kone karesh chie
     public static class ViewHolderShowItem extends RecyclerView.ViewHolder {
         private final TextView nameTextView;
-
         ViewHolderShowItem(View itemView) {
             super(itemView);
             nameTextView = itemView.findViewById(R.id.nameTextview);
