@@ -29,5 +29,11 @@
         app:layout_constraintBottom_toTopOf="@id/my_recycler_view"
         android:text="Import Contacts"
         tools:ignore="MissingConstraints" />
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

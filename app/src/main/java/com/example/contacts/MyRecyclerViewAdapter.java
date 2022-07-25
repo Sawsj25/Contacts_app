@@ -10,7 +10,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
-import java.util.Objects;
 
 public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAdapter.ViewHolderShowItem> {
 
@@ -30,7 +29,7 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
 
     @Override
     public void onBindViewHolder(ViewHolderShowItem holder, int position) {
-        if(position == -1) return;
+        if (position == -1) return;
         String contact = mData.get(position);
         holder.nameTextView.setText(contact);
     }
@@ -41,13 +40,17 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
             return 0;
         return mData.size();
     }
+
     public static class ViewHolderShowItem extends RecyclerView.ViewHolder {
         private final TextView nameTextView;
+
         ViewHolderShowItem(View itemView) {
             super(itemView);
             nameTextView = itemView.findViewById(R.id.nameTextview);
         }
     }
+
+
 }
 
 
